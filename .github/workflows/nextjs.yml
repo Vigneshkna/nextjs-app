@@ -35,6 +35,7 @@ jobs:
         id: webapp-build
         run: |
           cd Webapp
+          echo "Current directory: $(pwd)"
           WEBAPP_DIR=$(pwd)
       - name: Detect package manager
         id: detect-package-manager
