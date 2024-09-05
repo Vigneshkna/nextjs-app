@@ -86,11 +86,12 @@ jobs:
           echo $(pwd)
           ls 
           cd ..
+          echo $(pwd)
           ls
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ../out
 
   # Deployment job
   deploy:
