@@ -83,13 +83,13 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Paths
         run: |
-          echo $pwd
+          echo $(pwd)
           ls -a
           cd ..
-          echo $pwd
+          echo $(pwd)
           ls -a
           cd ..
-          echo $pwd
+          echo $(pwd)
           ls -a
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
