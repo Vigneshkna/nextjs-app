@@ -33,6 +33,8 @@ jobs:
         shell: bash
         working-directory: ./Webapp
     steps:
+      - name: path
+        run: echo $(pwd)
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
