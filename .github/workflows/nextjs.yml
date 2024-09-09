@@ -14,7 +14,8 @@ on:
 
 defaults:
   run:
-    working-directory: ./Webapp/
+    shell: bash
+    working-directory: ./Webapp
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
