@@ -31,7 +31,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./Webapp
+        working-directory: Webapp
     steps:
       - name: path
         run: echo $(pwd)
