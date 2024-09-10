@@ -24,17 +24,13 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 env:
-  BUILD_PATH: "/Webapp" # default value when not using subfolders
+  BUILD_PATH: "./Webapp" # default value when not using subfolders
   # BUILD_PATH: subfolder
 
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: Webapp
     steps:
       - name: Checkout
         uses: actions/checkout@v4
