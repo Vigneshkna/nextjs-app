@@ -23,6 +23,9 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+env:
+  BUILD_PATH: "/Webapp" # default value when not using subfolders
+  # BUILD_PATH: subfolder
 
 jobs:
   # Build job
@@ -39,6 +42,7 @@ jobs:
         run: echo $(pwd)
       - name: Detect package manager
         id: detect-package-manager
+        working-directory: ${{ env.BUILD_PATH }}
         run: |
           if [ -f "$(pwd)/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
@@ -81,13 +85,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
+        working-directory: ${{ env.BUILD_PATH }}
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
+        working-directory: ${{ env.BUILD_PATH }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{github.workspace}}
+          path: ${{ env.BUILD_PATH }}
 
   # Deployment job
   deploy:
