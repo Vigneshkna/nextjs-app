@@ -39,7 +39,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: path
-        run: echo $(pwd)
+        run: | 
+          echo $(pwd)
+          echo ${{ env.BUILD_PATH }}
       - name: Detect package manager
         id: detect-package-manager
         working-directory: ${{ env.BUILD_PATH }}
