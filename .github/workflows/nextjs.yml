@@ -87,7 +87,10 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         working-directory: ${{ env.BUILD_PATH }}
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build 
+      - name: Export with Next.js
+        working-directory: ${{ env.BUILD_PATH }}
+        run: ${{ steps.detect-package-manager.outputs.runner }} next export 
       - name: paths
         working-directory: ${{ env.BUILD_PATH }}
         run: |
@@ -102,7 +105,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_PATH }}/.out
+          path: ./out
 
   # Deployment job
   deploy:
