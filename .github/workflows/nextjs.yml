@@ -99,16 +99,16 @@ jobs:
           cd ..
           echo $(pwd)
           ls -a
-      - name: Move Next.js build directory
-        working-directory: ${{ env.BUILD_PATH }}
-        run: |
-          mv /out ../out
-        shell: bash
+      # - name: Move Next.js build directory
+      #   working-directory: ${{ env.BUILD_PATH }}
+      #   run: |
+      #     mv /out ../out
+      #   shell: bash
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ${{ env.BUILD_PATH }}/out
 
   # Deployment job
   deploy:
