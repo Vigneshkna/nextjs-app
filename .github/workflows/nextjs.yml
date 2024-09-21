@@ -89,6 +89,7 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: paths
+        working-directory: ${{ env.BUILD_PATH }}
         run: |
           echo $(pwd)
           ls -a
@@ -101,7 +102,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.out
+          path: ${{ env.BUILD_PATH }}/.out
 
   # Deployment job
   deploy:
