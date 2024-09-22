@@ -34,10 +34,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: path
-        run: | 
-          echo $(pwd)
-          echo ${{ env.BUILD_PATH }}
       - name: Detect package manager
         id: detect-package-manager
         working-directory: ${{ env.BUILD_PATH }}
@@ -87,24 +83,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         working-directory: ${{ env.BUILD_PATH }}
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build 
-      - name: paths
-        working-directory: ${{ env.BUILD_PATH }}
-        run: |
-          echo $(pwd)
-          ls -a
-          cd ..
-          echo $(pwd)
-          ls -a
-          cd ..
-          echo $(pwd)
-          ls -a
-      # - name: Move Next.js build directory
-      #   working-directory: ${{ env.BUILD_PATH }}
-      #   run: |
-      #     mv /out ../out
-      #   shell: bash
-      
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
