@@ -31,12 +31,16 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./Webapp
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
         id: detect-package-manager
-        working-directory: ${{ env.BUILD_PATH }}
+        # working-directory: ${{ env.BUILD_PATH }}
         run: |
           if [ -f "$(pwd)/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
@@ -79,15 +83,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        working-directory: ${{ env.BUILD_PATH }}
+        # working-directory: ${{ env.BUILD_PATH }}
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        working-directory: ${{ env.BUILD_PATH }}
+        # working-directory: ${{ env.BUILD_PATH }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_PATH }}/out
+          path: out
 
   # Deployment job
   deploy:
