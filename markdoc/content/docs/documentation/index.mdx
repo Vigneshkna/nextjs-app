@@ -1,60 +1,27 @@
 ---
-title: Documentation
-description: Build your documentation site using Contentlayer and MDX.
+title: Why How2Validate ?
+description: Learn why to use How2Validate for automating secret validation and ensuring security compliance.
 ---
 
-Taxonomy includes a documentation site built using [Contentlayer](https://contentlayer.dev) and [MDX](http://mdxjs.com).
+In today's digital landscape, the exposure of sensitive information such as API keys, passwords, and tokens can lead to significant security breaches. These vulnerabilities often arise from:
+
+- **Leaked API Keys**: Unintentional exposure through public repositories or logs.
+- **Invalid Credentials**: Using outdated or incorrect credentials that can compromise systems.
+- **Misconfigured Secrets**: Improperly managed secrets leading to unauthorized access.
+
+**How2Validate** addresses these concerns by providing a robust solution to verify the authenticity and validity of your secrets directly with official providers. This proactive approach helps in:
+
+- **Mitigating Risks**: Prevent unauthorized access by ensuring only active secrets are used.
+- **Enhancing Security Posture**: Strengthen your application's security by regularly validating secrets.
+
 
 ## Features
 
-It comes with the following features out of the box:
+**How2Validate** offers a range of features designed to enhance the security and efficiency of secret management:
 
-1. Write content using MDX.
-2. Transform and validate content using Contentlayer.
-3. MDX components such as `<Callout />` and `<Card />`.
-4. Support for table of contents.
-5. Custom navigation with prev and next pager.
-6. Beautiful code blocks using `rehype-pretty-code`.
-7. Syntax highlighting using `shiki`.
-8. Built-in search (_in progress_).
-9. Dark mode (_in progress_).
-
-## How is it built
-
-Click on a section below to learn how the documentation site built.
-
-<div className="grid gap-4 mt-6">
-
-<Card href="/docs/documentation">
-
-### Contentlayer
-
-Learn how to use MDX with Contentlayer.
-
-</Card>
-
-<Card href="/docs/documentation/components">
-
-### Components
-
-Using React components in Mardown.
-
-</Card>
-
-<Card href="/docs/documentation/components">
-
-### Code Blocks
-
-Beautiful code blocks with syntax highlighting.
-
-</Card>
-
-<Card href="/docs/documentation/components">
-
-### Style Guide
-
-View a sample page with all the styles.
-
-</Card>
-
-</div>
+- **Validate API Keys, Passwords, and Sensitive Information**: Interacts with official provider authentication endpoints to ensure the authenticity of secrets.
+- **Cross-Platform Support**: Available for JavaScript, Python, and Docker environments.
+- **Easy to Use**: Simplifies secret validation with straightforward commands and functions.
+- **Real-Time Feedback**: Instantly know the status of your secrets  whether they are active or not.
+- **Detailed Reporting**: Receive comprehensive reports on secret validation (Alpha Feature).
+- **Updating Providers**: Keep the tool up-to-date with the latest secret providers and their secret types.

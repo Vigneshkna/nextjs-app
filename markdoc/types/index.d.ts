@@ -33,8 +33,9 @@ export type SiteConfig = {
   url: string
   ogImage: string
   links: {
-    twitter: string
     github: string
+    ghdiscussion: string
+    ghcontributors: string
   }
 }
 
@@ -43,23 +44,6 @@ export type DocsConfig = {
   sidebarNav: SidebarNavItem[]
 }
 
-export type MarketingConfig = {
+export type IndexConfig = {
   mainNav: MainNavItem[]
 }
-
-export type DashboardConfig = {
-  mainNav: MainNavItem[]
-  sidebarNav: SidebarNavItem[]
-}
-
-export type SubscriptionPlan = {
-  name: string
-  description: string
-  stripePriceId: string
-}
-
-export type UserSubscriptionPlan = SubscriptionPlan &
-  Pick<User, "stripeCustomerId" | "stripeSubscriptionId"> & {
-    stripeCurrentPeriodEnd: number
-    isPro: boolean
-  }

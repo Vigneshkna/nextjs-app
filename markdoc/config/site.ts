@@ -1,13 +1,14 @@
 import { SiteConfig } from "types"
 
 export const siteConfig: SiteConfig = {
-  name: "Taxonomy",
+  name: "How2Validate",
   description:
-    "An open source application built using the new router, server components and everything new in Next.js 13.",
-  url: "https://tx.shadcn.com",
-  ogImage: "https://tx.shadcn.com/og.jpg",
+    "A CLI tool to validate secrets for different services.",
+  url: "https://how2validate.vercel.app/",
+  ogImage: "https://tx.shadcn.com/og.png",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/taxonomy",
+    github: "https://github.com/Blackplums/how2validate",
+    ghdiscussion:"https://github.com/Blackplums/how2validate/discussions",
+    ghcontributors: "https://github.com/Blackplums/how2validate/graphs/contributors"
   },
 }

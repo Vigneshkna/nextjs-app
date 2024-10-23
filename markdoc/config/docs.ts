@@ -7,8 +7,8 @@ export const docsConfig: DocsConfig = {
       href: "/docs",
     },
     {
-      title: "Guides",
-      href: "/guides",
+      title: "Blog",
+      href: "/blog",
     },
   ],
   sidebarNav: [
@@ -16,39 +16,72 @@ export const docsConfig: DocsConfig = {
       title: "Getting Started",
       items: [
         {
-          title: "Introduction",
-          href: "/docs",
+          title: "Why How2Validate ?",
+          href: "/docs/documentation",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Installation and Usage",
       items: [
         {
-          title: "Introduction",
-          href: "/docs/documentation",
+          title: "Package Registry",
+          href: "/docs/documentation/installation/package",
         },
         {
-          title: "Contentlayer",
-          href: "/docs/in-progress",
-          disabled: true,
+          title: "CLI",
+          href: "/docs/documentation/installation/cli",
         },
         {
-          title: "Components",
-          href: "/docs/documentation/components",
+          title: "JavaScript",
+          href: "/docs/documentation/installation/js",
         },
         {
-          title: "Code Blocks",
-          href: "/docs/documentation/code-blocks",
+          title: "Python",
+          href: "/docs/documentation/installation/py",
         },
         {
-          title: "Style Guide",
-          href: "/docs/documentation/style-guide",
+          title: "Docker",
+          href: "/docs/documentation/installation/container",
+        },
+      ],
+    },
+    {
+      title: "API Reference",
+      items: [
+        {
+          title: "API Routes",
+          href: "/docs/documentation/api",
+        },
+      ],
+    },
+    {
+      title: "Email Report",
+      items: [
+        {
+          title: "Reports",
+          href: "/docs/documentation/report",
+        },
+      ],
+    },
+    {
+      title: "FAQ's",
+      items: [
+        {
+          title: "General",
+          href: "/docs/documentation/faqs/general",
         },
         {
-          title: "Search",
-          href: "/docs/in-progress",
-          disabled: true,
+          title: "Installation and Usage",
+          href: "/docs/documentation/faqs/installation",
+        },
+        {
+          title: "Security",
+          href: "/docs/documentation/faqs/security",
+        },
+        {
+          title: "Troubleshooting",
+          href: "/docs/documentation/faqs/trobleshoot",
         },
       ],
     },
@@ -67,66 +100,6 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Writing Posts",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
-      title: "Dashboard",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Layouts",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Server Components",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Authentication",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Database with Prisma",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "API Routes",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-      ],
-    },
-    {
-      title: "Marketing Site",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "File Structure",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Tailwind CSS",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "Typography",
           href: "/docs/in-progress",
           disabled: true,
         },

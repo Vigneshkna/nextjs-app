@@ -30,20 +30,19 @@ export const metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  abstract: siteConfig.description,
+  applicationName: siteConfig.name,
+  authors:[{ name: "BlackPlum Team", url: "https://github.com/Blackplums" }],
+  creator: "BlackPlum Team",
   keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
+   "secret validation",
+    "secret CLI tool",
+    "how to validate",
+    "security",
+    "passwords",
+    "API keys",
+    "tokens"
   ],
-  authors: [
-    {
-      name: "shadcn",
-      url: "https://shadcn.com",
-    },
-  ],
-  creator: "shadcn",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -55,13 +54,17 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [{
+      url: "https://repository-images.githubusercontent.com/852339948/f8b583f1-d0aa-4d1e-a672-d3c7699d1c0e",
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
-    creator: "@shadcn",
+    images: [`${siteConfig.url}/og.png`],
+    site: "@site", 
+    creator: "@creator", 
   },
   icons: {
     icon: "/favicon.ico",
