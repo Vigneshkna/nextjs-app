@@ -43,10 +43,6 @@ export const metadata = {
     "API keys",
     "tokens"
   ],
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -73,6 +69,14 @@ export const metadata = {
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
+
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+}
+
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
