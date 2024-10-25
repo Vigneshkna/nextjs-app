@@ -4,7 +4,8 @@ import { getProvider } from '@how2validate/how2validate';
 
 export async function GET() {
   try {
-    const providers = await getProvider();
+    const providersResponse = await getProvider();
+    const providers = providersResponse.data.provider; // Extract only the providers
     return new Response(JSON.stringify(providers), {
       status: 200,
       headers: {

@@ -12,7 +12,8 @@ export async function GET(request) {
   }
 
   try {
-    const services = await getService(provider);
+    const servicesResponse = await getService(provider);
+    const services = servicesResponse.data.services; // Extract only the services
     return new Response(JSON.stringify(services), {
       status: 200,
       headers: {

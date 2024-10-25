@@ -1,101 +1,179 @@
-import Image from "next/image";
+// app/page.tsx
 
-export default function Home() {
+"use client"; // Mark the component as a Client Component
+
+import React, { useEffect, useState } from 'react';
+
+const ValidatePage = () => {
+  const [provider, setProvider] = useState('');
+  const [service, setService] = useState('');
+  const [secret, setSecret] = useState('');
+  const [response, setResponse] = useState(true); // Assuming boolean
+  const [report, setReport] = useState(false); // Assuming boolean
+  const [providers, setProviders] = useState<string[]>([]); // Ensure this is initialized as an empty array
+  const [services, setServices] = useState<string[]>([]); // Ensure this is initialized as an empty array
+  const [result, setResult] = useState<any>(null); // Use appropriate type based on expected response
+  const [error, setError] = useState<string | null>(null); // Explicitly type error as string | null
+  const [loading, setLoading] = useState(false);
+
+  // Fetch providers on component mount
+  useEffect(() => {
+    const fetchProviders = async () => {
+      try {
+        const res = await fetch('/api/getProvider');
+        if (!res.ok) {
+          throw new Error('Failed to fetch providers');
+        }
+        const data = await res.json();
+        setProviders(data || []); // Set providers directly to data
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unknown error occurred while fetching providers');
+        }
+      }
+    };
+
+    fetchProviders();
+  }, []);
+
+  // Fetch services when the provider changes
+  useEffect(() => {
+    const fetchServices = async () => {
+      if (provider) {
+        try {
+          const res = await fetch(`/api/getServices?provider=${encodeURIComponent(provider)}`);
+          if (!res.ok) {
+            throw new Error('Failed to fetch services');
+          }
+          const data = await res.json();
+          setServices(data || []); // Set services directly to data
+        } catch (err: unknown) {
+          if (err instanceof Error) {
+            setError(err.message);
+          } else {
+            setError('An unknown error occurred while fetching services');
+          }
+        }
+      }
+    };
+
+    fetchServices();
+  }, [provider]); // Fetch services whenever the provider changes
+
+  const handleValidate = async () => {
+    setLoading(true);
+    setError(null);
+    setResult(null);
+
+    try {
+      const res = await fetch('/api/validate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ provider, service, secret, response, report }),
+      });
+
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await res.json();
+      setResult(data);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message); // Error message is now correctly typed
+      } else {
+        setError('An unknown error occurred during validation');
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <h1>Validate Input</h1>
+      <div>
+        <label>
+          Provider:
+          <select
+            value={provider}
+            onChange={(e) => setProvider(e.target.value)}
+          >
+            <option value="">Select a provider</option>
+            {providers.length > 0 ? ( // Check if providers array is not empty
+              providers.map((prov) => (
+                <option key={prov} value={prov}>
+                  {prov}
+                </option>
+              ))
+            ) : (
+              <option disabled>No providers available</option> // Handle case when no providers are available
+            )}
+          </select>
+        </label>
+      </div>
+      <div>
+        <label>
+          Service:
+          <select
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+            disabled={!provider} // Disable until a provider is selected
+          >
+            <option value="">Select a service</option>
+            {services.length > 0 ? ( // Check if services array is not empty
+              services.map((srv) => (
+                <option key={srv} value={srv}>
+                  {srv}
+                </option>
+              ))
+            ) : (
+              <option disabled>No services available</option> // Handle case when no services are available
+            )}
+          </select>
+        </label>
+      </div>
+      <input
+        type="text"
+        placeholder="Secret"
+        value={secret}
+        onChange={(e) => setSecret(e.target.value)}
+      />
+      <div>
+        <label>
+          Response:
+          <input
+            type="checkbox"
+            checked={response}
+            onChange={() => setResponse((prev) => !prev)}
+          />
+        </label>
+        <label>
+          Report:
+          <input
+            type="checkbox"
+            checked={report}
+            onChange={() => setReport((prev) => !prev)}
+          />
+        </label>
+      </div>
+      <button onClick={handleValidate} disabled={loading}>
+        {loading ? 'Validating...' : 'Validate'}
+      </button>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          {/* <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a> */}
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+      {result && (
+        <div>
+          <h2>Validation Result:</h2>
+          <pre>{JSON.stringify(result, null, 2)}</pre>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      )}
     </div>
   );
-}
+};
+
+export default ValidatePage;

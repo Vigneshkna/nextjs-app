@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@how2validate/how2validate": "npm:@jsr/how2validate__how2validate@^0.0.2-beta.44"
+  }
+}

@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@how2validate/how2validate": "npm:@jsr/how2validate__how2validate@^0.0.2-beta.24",
+    "@how2validate/how2validate": "npm:@jsr/how2validate__how2validate@^0.0.2-beta.44",
     "next": "14.2.8",
     "react": "^18",
     "react-dom": "^18"
