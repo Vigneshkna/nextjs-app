@@ -91,11 +91,7 @@ importers:
         version: 0.11.1(typescript@5.6.3)(zod@3.23.8)
       '@vercel/analytics':
         specifier: ^1.3.1
-<<<<<<< HEAD
-        version: 1.3.1(next@13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
-=======
-        version: 1.3.1(next@13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
+        version: 1.3.2(next@13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@vercel/og':
         specifier: ^0.6.3
         version: 0.6.3
@@ -121,16 +117,6 @@ importers:
         specifier: ^0.453.0
         version: 0.453.0(react@18.3.1)
       next:
-<<<<<<< HEAD
-        specifier: 13.3.2-canary.13
-        version: 13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      next-contentlayer:
-        specifier: ^0.3.1
-        version: 0.3.4(contentlayer@0.3.4(esbuild@0.18.20))(esbuild@0.18.20)(next@13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      next-themes:
-        specifier: ^0.2.1
-        version: 0.2.1(next@13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-=======
         specifier: '13.5'
         version: 13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-contentlayer:
@@ -139,7 +125,6 @@ importers:
       next-themes:
         specifier: ^0.2.1
         version: 0.2.1(next@13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -753,112 +738,62 @@ packages:
   '@mdx-js/mdx@2.3.0':
     resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
 
-<<<<<<< HEAD
-  '@next/env@13.3.2-canary.13':
-    resolution: {integrity: sha512-5An4FW4riPxsNDOwaFKT8JX0wP++sKB5hHSVUqmwcqxmtNeyg6Ax86TdvWFQGBdi9evDBngMJptRaZKC1eHoFg==}
-=======
   '@next/env@13.5.7':
     resolution: {integrity: sha512-uVuRqoj28Ys/AI/5gVEgRAISd0KWI0HRjOO1CTpNgmX3ZsHb5mdn14Y59yk0IxizXdo7ZjsI2S7qbWnO+GNBcA==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
 
   '@next/eslint-plugin-next@15.0.1':
     resolution: {integrity: sha512-bKWsMaGPbiFAaGqrDJvbE8b4Z0uKicGVcgOI77YM2ui3UfjHMr4emFPrZTLeZVchi7fT1mooG2LxREfUUClIKw==}
 
-<<<<<<< HEAD
-  '@next/swc-darwin-arm64@13.3.2-canary.13':
-    resolution: {integrity: sha512-VcSa2+gEOPMfzHoAamkH25wxTit3kOoXeTXJEKDbTIGuUovyY41/l5GLAv+rqY7Pp4moUmpFivOk4CbdbXBaNw==}
-=======
   '@next/swc-darwin-arm64@13.5.7':
     resolution: {integrity: sha512-7SxmxMex45FvKtRoP18eftrDCMyL6WQVYJSEE/s7A1AW/fCkznxjEShKet2iVVzf89gWp8HbXGaL4hCaseux6g==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-<<<<<<< HEAD
-  '@next/swc-darwin-x64@13.3.2-canary.13':
-    resolution: {integrity: sha512-ve8p/7Y45GzEZ5mCgeMxf6tJAk5ZLmztnvmVHiQjoOLYvkhoz7rSJVi7z+bt5yv8/QQUlXF90/naSD35rm2RYw==}
-=======
   '@next/swc-darwin-x64@13.5.7':
     resolution: {integrity: sha512-6iENvgyIkGFLFszBL4b1VfEogKC3TDPEB6/P/lgxmgXVXIV09Q4or1MVn+U/tYyYmm7oHMZ3oxGpHAyJ80nA6g==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-<<<<<<< HEAD
-  '@next/swc-linux-arm64-gnu@13.3.2-canary.13':
-    resolution: {integrity: sha512-OtAk9KQp0pG0qCduRMmABhGKoXyjc+9Jn5vRpEEWbbFHL0kx8gHpJbkeiohfm493wpY5XB3JQAlEVcpiHkQFRg==}
-=======
   '@next/swc-linux-arm64-gnu@13.5.7':
     resolution: {integrity: sha512-P42jDX56wu9zEdVI+Xv4zyTeXB3DpqgE1Gb4bWrc0s2RIiDYr6uKBprnOs1hCGIwfVyByxyTw5Va66QCdFFNUg==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-<<<<<<< HEAD
-  '@next/swc-linux-arm64-musl@13.3.2-canary.13':
-    resolution: {integrity: sha512-B3+0YSoDteMlVwUhfurMoWZjw8WFJztkXq7Uono+2EhHjLP1uqv+DJMVcorQO3x13oD3kqCgSa+tlFwjKDqeQw==}
-=======
   '@next/swc-linux-arm64-musl@13.5.7':
     resolution: {integrity: sha512-A06vkj+8X+tLRzSja5REm/nqVOCzR+x5Wkw325Q/BQRyRXWGCoNbQ6A+BR5M86TodigrRfI3lUZEKZKe3QJ9Bg==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-<<<<<<< HEAD
-  '@next/swc-linux-x64-gnu@13.3.2-canary.13':
-    resolution: {integrity: sha512-e/tO3Woq/fyBR+Q/3O8yDdatT64inzrFt/nh/KWG6xZV+Nda0y4dKYPTKfTEuOK9hbMT+/0vbeSMtH98BeesXA==}
-=======
   '@next/swc-linux-x64-gnu@13.5.7':
     resolution: {integrity: sha512-UdHm7AlxIbdRdMsK32cH0EOX4OmzAZ4Xm+UVlS0YdvwLkI3pb7AoBEoVMG5H0Wj6Wpz6GNkrFguHTRLymTy6kw==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-<<<<<<< HEAD
-  '@next/swc-linux-x64-musl@13.3.2-canary.13':
-    resolution: {integrity: sha512-BlXeIpG1ZAldsdU1K7VmI7V+65PU3DL5mGzhxkNrhLJZUwvMuq354oo77gwxzbJzVxvwZ1bRGJ/eZOWIs+Gjxw==}
-=======
   '@next/swc-linux-x64-musl@13.5.7':
     resolution: {integrity: sha512-c50Y8xBKU16ZGj038H6C13iedRglxvdQHD/1BOtes56gwUrIRDX2Nkzn3mYtpz3Wzax0gfAF9C0Nqljt93IxvA==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-<<<<<<< HEAD
-  '@next/swc-win32-arm64-msvc@13.3.2-canary.13':
-    resolution: {integrity: sha512-AHUxH2aRF0MoHGjGkQydqD1LU9RMIdREMD9A7Tf2bCcMvdFYlyfKP8DfW9T3bh+YBnGlFo1/HlSy1mBGHbUTfA==}
-=======
   '@next/swc-win32-arm64-msvc@13.5.7':
     resolution: {integrity: sha512-NcUx8cmkA+JEp34WNYcKW6kW2c0JBhzJXIbw+9vKkt9m/zVJ+KfizlqmoKf04uZBtzFN6aqE2Fyv2MOd021WIA==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-<<<<<<< HEAD
-  '@next/swc-win32-ia32-msvc@13.3.2-canary.13':
-    resolution: {integrity: sha512-qD9rMFLeyEVNSMsRgrpB5p8mrCt2Nsw7F57qe4Z72H6w9anJJOfU1Y0gm+c//J/Q0Vo8hcnnwLEbThBtR0GtLQ==}
-=======
   '@next/swc-win32-ia32-msvc@13.5.7':
     resolution: {integrity: sha512-wXp+/3NVcuyJDED6gJiLXs5dqHaWO7moAB6aBtjlKZvsxBDxpcyjsfRbtHPeYtaT20zCkmPs69H0K25lrVZmlA==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
 
-<<<<<<< HEAD
-  '@next/swc-win32-x64-msvc@13.3.2-canary.13':
-    resolution: {integrity: sha512-ZfOwe3hLtp94XL1bZn3kw4I5tQtXPYf47oGx4Uk5GhVWWMHMXEfuWKb4ACNYnX041V1HVDAyfHh/dmqsiUSKZQ==}
-=======
   '@next/swc-win32-x64-msvc@13.5.7':
     resolution: {integrity: sha512-PLyD3Dl6jTTkLG8AoqhPGd5pXtSs8wbqIhWPQt3yEMfnYld/dGYuF2YPs3YHaVFrijCIF9pXY3+QOyvP23Zn7g==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -1856,13 +1791,8 @@ packages:
     engines: {node: '>= 8.0.0'}
     hasBin: true
 
-<<<<<<< HEAD
-  '@swc/helpers@0.5.1':
-    resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
-=======
   '@swc/helpers@0.5.2':
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
 
   '@t3-oss/env-core@0.11.1':
     resolution: {integrity: sha512-MaxOwEoG1ntCFoKJsS7nqwgcxLW1SJw238AJwfJeaz3P/8GtkxXZsPPolsz1AdYvUTbe3XvqZ/VCdfjt+3zmKw==}
@@ -2018,11 +1948,11 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@vercel/analytics@1.3.1':
-    resolution: {integrity: sha512-xhSlYgAuJ6Q4WQGkzYTLmXwhYl39sWjoMA3nHxfkvG+WdBT25c563a7QhwwKivEOZtPJXifYHR1m2ihoisbWyA==}
+  '@vercel/analytics@1.3.2':
+    resolution: {integrity: sha512-n/Ws7skBbW+fUBMeg+jrT30+GP00jTHvCcL4fuVrShuML0uveEV/4vVUdvqEVnDgXIGfLm0GXW5EID2mCcRXhg==}
     peerDependencies:
       next: '>= 13'
-      react: ^18 || ^19
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
     peerDependenciesMeta:
       next:
         optional: true
@@ -3625,36 +3555,18 @@ packages:
       react: '*'
       react-dom: '*'
 
-<<<<<<< HEAD
-  next@13.3.2-canary.13:
-    resolution: {integrity: sha512-bz3TkzSdiY+ABBW0/aqOl0EvQTQapQtkvsPYCR5LGAM0eeQ8V6ZPrH+4RhkHJMN48qNU9MQZQlP7SsKCabGciw==}
-    engines: {node: '>=16.8.0'}
-    hasBin: true
-    peerDependencies:
-      '@opentelemetry/api': ^1.1.0
-      fibers: '>= 3.1.0'
-      node-sass: ^6.0.0 || ^7.0.0
-=======
   next@13.5.7:
     resolution: {integrity: sha512-W7KIRTE+hPcgGdq89P3mQLDX3m7pJ6nxSyC+YxYaUExE+cS4UledB+Ntk98tKoyhsv6fjb2TRAnD7VDvoqmeFg==}
     engines: {node: '>=16.14.0'}
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
       react: ^18.2.0
       react-dom: ^18.2.0
       sass: ^1.3.0
     peerDependenciesMeta:
       '@opentelemetry/api':
         optional: true
-<<<<<<< HEAD
-      fibers:
-        optional: true
-      node-sass:
-        optional: true
-=======
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
       sass:
         optional: true
 
@@ -3869,8 +3781,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.4.14:
-    resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
+  postcss@8.4.31:
+    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.4.47:
@@ -5278,43 +5190,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-<<<<<<< HEAD
-  '@next/env@13.3.2-canary.13': {}
-=======
   '@next/env@13.5.7': {}
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
 
   '@next/eslint-plugin-next@15.0.1':
     dependencies:
       fast-glob: 3.3.1
 
-<<<<<<< HEAD
-  '@next/swc-darwin-arm64@13.3.2-canary.13':
-    optional: true
-
-  '@next/swc-darwin-x64@13.3.2-canary.13':
-    optional: true
-
-  '@next/swc-linux-arm64-gnu@13.3.2-canary.13':
-    optional: true
-
-  '@next/swc-linux-arm64-musl@13.3.2-canary.13':
-    optional: true
-
-  '@next/swc-linux-x64-gnu@13.3.2-canary.13':
-    optional: true
-
-  '@next/swc-linux-x64-musl@13.3.2-canary.13':
-    optional: true
-
-  '@next/swc-win32-arm64-msvc@13.3.2-canary.13':
-    optional: true
-
-  '@next/swc-win32-ia32-msvc@13.3.2-canary.13':
-    optional: true
-
-  '@next/swc-win32-x64-msvc@13.3.2-canary.13':
-=======
   '@next/swc-darwin-arm64@13.5.7':
     optional: true
 
@@ -5340,7 +5221,6 @@ snapshots:
     optional: true
 
   '@next/swc-win32-x64-msvc@13.5.7':
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     optional: true
 
   '@nodelib/fs.scandir@2.1.5':
@@ -6377,11 +6257,7 @@ snapshots:
       fflate: 0.7.4
       string.prototype.codepointat: 0.2.1
 
-<<<<<<< HEAD
-  '@swc/helpers@0.5.1':
-=======
   '@swc/helpers@0.5.2':
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     dependencies:
       tslib: 2.8.0
 
@@ -6560,19 +6436,11 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-<<<<<<< HEAD
-  '@vercel/analytics@1.3.1(next@13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      server-only: 0.0.1
-    optionalDependencies:
-      next: 13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-=======
-  '@vercel/analytics@1.3.1(next@13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+  '@vercel/analytics@1.3.2(next@13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       server-only: 0.0.1
     optionalDependencies:
       next: 13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
       react: 18.3.1
 
   '@vercel/og@0.6.3':
@@ -8649,20 +8517,12 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-<<<<<<< HEAD
-  next-contentlayer@0.3.4(contentlayer@0.3.4(esbuild@0.18.20))(esbuild@0.18.20)(next@13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-=======
   next-contentlayer@0.3.4(contentlayer@0.3.4(esbuild@0.18.20))(esbuild@0.18.20)(next@13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
     dependencies:
       '@contentlayer/core': 0.3.4(esbuild@0.18.20)
       '@contentlayer/utils': 0.3.4
       contentlayer: 0.3.4(esbuild@0.18.20)
-<<<<<<< HEAD
-      next: 13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-=======
       next: 13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -8671,18 +8531,6 @@ snapshots:
       - markdown-wasm
       - supports-color
 
-<<<<<<< HEAD
-  next-themes@0.2.1(next@13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      next: 13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  next@13.3.2-canary.13(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      '@next/env': 13.3.2-canary.13
-      '@swc/helpers': 0.5.1
-=======
   next-themes@0.2.1(next@13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       next: 13.5.7(@babel/core@7.25.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -8693,25 +8541,12 @@ snapshots:
     dependencies:
       '@next/env': 13.5.7
       '@swc/helpers': 0.5.2
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
       busboy: 1.6.0
       caniuse-lite: 1.0.30001669
-      postcss: 8.4.14
+      postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       styled-jsx: 5.1.1(@babel/core@7.25.9)(react@18.3.1)
-<<<<<<< HEAD
-    optionalDependencies:
-      '@next/swc-darwin-arm64': 13.3.2-canary.13
-      '@next/swc-darwin-x64': 13.3.2-canary.13
-      '@next/swc-linux-arm64-gnu': 13.3.2-canary.13
-      '@next/swc-linux-arm64-musl': 13.3.2-canary.13
-      '@next/swc-linux-x64-gnu': 13.3.2-canary.13
-      '@next/swc-linux-x64-musl': 13.3.2-canary.13
-      '@next/swc-win32-arm64-msvc': 13.3.2-canary.13
-      '@next/swc-win32-ia32-msvc': 13.3.2-canary.13
-      '@next/swc-win32-x64-msvc': 13.3.2-canary.13
-=======
       watchpack: 2.4.0
     optionalDependencies:
       '@next/swc-darwin-arm64': 13.5.7
@@ -8723,7 +8558,6 @@ snapshots:
       '@next/swc-win32-arm64-msvc': 13.5.7
       '@next/swc-win32-ia32-msvc': 13.5.7
       '@next/swc-win32-x64-msvc': 13.5.7
->>>>>>> 8ef3d6c (chore(pkg):downgraded the package)
       '@opentelemetry/api': 1.9.0
     transitivePeerDependencies:
       - '@babel/core'
@@ -8938,7 +8772,7 @@ snapshots:
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.4.14:
+  postcss@8.4.31:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.1.1
