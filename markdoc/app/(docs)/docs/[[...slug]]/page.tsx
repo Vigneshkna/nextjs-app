@@ -11,6 +11,7 @@ import "@/styles/mdx.css"
 import { Metadata } from "next"
 
 import { absoluteUrl } from "@/lib/utils"
+import { siteConfig } from "@/config/site"
 
 interface DocPageProps {
   params: {
@@ -38,7 +39,7 @@ export async function generateMetadata({
     return {}
   }
 
-  const url = env.NEXT_PUBLIC_APP_URL
+  const url = siteConfig.url
 
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set("heading", doc.description ?? doc.title)
