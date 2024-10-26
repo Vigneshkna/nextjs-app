@@ -61,6 +61,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "Reports",
           href: "/docs/documentation/report",
+          disabled:true
         },
       ],
     },

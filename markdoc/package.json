@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "name": "Blackplums",
+    "url": "https://github.com/Blackplums"
   },
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
