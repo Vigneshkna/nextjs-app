@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 import { withContentlayer } from 'next-contentlayer2';
-const webpack = require('webpack');
+import webpack from 'webpack';
 
-module.exports = {
+const nextConfig = {
   webpack: (config) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };
-    return withContentlayer(config);
+    return config;
   },
 };
+
+export default withContentlayer(nextConfig);
