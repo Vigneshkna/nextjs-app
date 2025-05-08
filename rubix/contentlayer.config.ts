@@ -7,7 +7,6 @@ const Post = defineDocumentType(() => ({
   fields: {
     title: { type: 'string' },
     date: { type: 'date' },
-    body: { type: 'markdown' },
   },
 }));
 
