@@ -21,7 +21,6 @@ import {
     ShieldCheck,
     SunMedium,
     Trash,
-    Twitter,
     User,
     X,
     type Icon as LucideIcon,
